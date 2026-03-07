@@ -15,7 +15,7 @@ namespace States
             Model.Set("BtnButtonStopEnable", false);
 
             // Слушаем событие окончания анимации рулетки.
-            Model.EventManager.AddAction("OnSlotStopped", OnSlotStopped);
+            Model?.EventManager.AddAction("OnSlotStopped", OnSlotStopped);
 
             // Сигнал во view: начать плавную остановку барабанов.
             Model.EventManager.Invoke("OnSlotStop");
@@ -26,7 +26,7 @@ namespace States
         [Exit]
         public void Exit()
         {
-            Model.EventManager.RemoveAction("OnSlotStopped", OnSlotStopped);
+            //Model?.EventManager.RemoveAction("OnSlotStopped", OnSlotStopped);
         }
 
         private void OnSlotStopped()

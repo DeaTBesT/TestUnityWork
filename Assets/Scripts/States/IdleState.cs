@@ -10,24 +10,28 @@ namespace States
         [Enter]
         public void Enter()
         {
-            // В режиме ожидания можно нажимать только "Старт".
-            Model.Set("BtnButtonStartEnable", false); // включим с небольшой задержкой
-            Model.Set("BtnButtonStopEnable", false);
-
-            Model.EventManager.AddAction($"OnButtonStartClick", ButtonStart);
+            Model?.EventManager.AddAction($"OnButtonStartClick", ButtonStart);
             Log.Debug($"Entering {Parent.CurrentStateName}");
         }
 
-        [Exit]
-        public void Exit()
+        [OnDelay(0.1f)]
+        private void DiactivateButtons()
         {
-            Model.EventManager.RemoveAction($"OnButtonStartClick", ButtonStart);
+            // В режиме ожидания можно нажимать только "Старт".
+            Model.Set("BtnButtonStartEnable", false); // включим с небольшой задержкой
+            Model.Set("BtnButtonStopEnable", false);
         }
-
-        [OnDelay(1.0f)]
+        
+        [OnDelay(0.2f)]
         private void ActivateButton()
         {
             Model.Set("BtnButtonStartEnable", true);
+        }
+        
+        [Exit]
+        public void Exit()
+        {
+            //Model.EventManager.RemoveAction($"OnButtonStartClick", ButtonStart);
         }
         
         private void ButtonStart()

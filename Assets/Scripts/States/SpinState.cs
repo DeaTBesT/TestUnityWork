@@ -10,28 +10,33 @@ namespace States
         [Enter]
         public void Enter()
         {
-            // При вращении старт недоступен, стоп появится позже.
-            Model.Set("BtnButtonStartEnable", false);
-            Model.Set("BtnButtonStopEnable", false);
-
-            Model.EventManager.AddAction("OnButtonStopClick", OnButtonStop);
+            Model?.EventManager.AddAction("OnButtonStopClick", OnButtonStop);
 
             // Сигнал во view: запустить анимацию рулетки.
-            Model.EventManager.Invoke("OnSlotStart");
+            Model?.EventManager.Invoke("OnSlotStart");
 
             Log.Debug($"Entering {Parent.CurrentStateName}");
         }
 
+        [OnDelay(0.1f)]
+        private void DiactivateButtons()
+        {
+            // В режиме ожидания можно нажимать только "Старт".
+            Model.Set("BtnButtonStartEnable", false); // включим с небольшой задержкой
+            Model.Set("BtnButtonStopEnable", false);
+        }
+        
         [Exit]
         public void Exit()
         {
-            Model.EventManager.RemoveAction("OnButtonStopClick", OnButtonStop);
+            //Model?.EventManager.RemoveAction("OnButtonStopClick", OnButtonStop);
         }
 
         // Через 3 секунды после входа в состояние разрешаем нажимать "Стоп".
-        [OnDelay(3.0f)]
+        [One(3.0f)]
         private void EnableStopButton()
         {
+            Log.Debug("Enable stopbutton");
             Model.Set("BtnButtonStopEnable", true);
         }
 

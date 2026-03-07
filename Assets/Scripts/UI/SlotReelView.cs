@@ -97,7 +97,6 @@ namespace UI
         /// <summary>
         /// Старт вращения слота. Вызывайте из FSM/кнопки "Старт".
         /// </summary>
-        [ContextMenu("Start spin")]
         public void StartSpin()
         {
             if (IsSpinning)
@@ -140,7 +139,6 @@ namespace UI
         /// Запрос на остановку. Вызывайте из FSM/кнопки "Стоп".
         /// Фактически остановка произойдёт плавно, плюс будет доворот к центру.
         /// </summary>
-        [ContextMenu("Stop spin")]
         public void RequestStop()
         {
             if (!_isSpinning)

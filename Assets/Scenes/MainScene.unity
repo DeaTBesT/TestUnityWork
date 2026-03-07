@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 108490412}
   - component: {fileID: 108490411}
   - component: {fileID: 108490410}
+  - component: {fileID: 108490413}
   m_Layer: 5
   m_Name: ButtonStop
   m_TagString: Untagged
@@ -278,6 +279,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108490408}
   m_CullTransparentMesh: 1
+--- !u!114 &108490413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108490408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8182fff6322be2a4392c8ad660ffb198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalModel: 0
+  buttonName: 
+  enableField: 
+  defaultEnable: 0
+  keyField: 
+  key: 
+  onKeyPress: 0
+  isFsmUI: 0
 --- !u!1001 &144518732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1658,7 +1679,7 @@ MonoBehaviour:
   globalModel: 0
   buttonName: 
   enableField: 
-  defaultEnable: 1
+  defaultEnable: 0
   keyField: 
   key: 
   onKeyPress: 0
