@@ -79,28 +79,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34742a05321cff84b9bb5e0074c71827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
+  _items:
   - {fileID: 6987786212128604325}
   - {fileID: 1446257204753350143}
   - {fileID: 5528805444072000258}
   - {fileID: 8251601263535649498}
   - {fileID: 4118689971985160258}
   - {fileID: 4712200789431037466}
-  itemHeight: 150
-  minSpeed: 300
-  maxSpeed: 1500
-  speedMultiplier: 0.8
-  acceleration: 2500
-  deceleration: 3000
-  minSpinTime: 3
-  snapDuration: 0.25
-  symbolSprites:
+  _itemHeight: 150
+  _minSpeed: 300
+  _maxSpeed: 1500
+  _speedMultiplier: 1
+  _acceleration: 2500
+  _deceleration: 3000
+  _minSpinTime: 3
+  _snapDuration: 0.25
+  _symbolSprites:
   - {fileID: -1925377011665060405, guid: c52d6d20049a4c74aa9692a92435c232, type: 3}
+  - {fileID: -9200123301886306478, guid: 6b90f95232c04ee42b6607ba2b68890c, type: 3}
   - {fileID: 313197043936953237, guid: d94f525549d693e4fa4f229eb0879c9d, type: 3}
-  - {fileID: -8088467617630128793, guid: 3e8249862e3647b46b365b23a2165a5b, type: 3}
-  - {fileID: 832738382391576305, guid: 5735ae0ca021d5a4ab949682273f038f, type: 3}
   - {fileID: 6772163968362390084, guid: b5748706e5f57804391f40f2d91a7f7f, type: 3}
+  - {fileID: -2285158189625049087, guid: 4490b4cfd0ef2704eba19ca5d4cf9f82, type: 3}
+  - {fileID: 832738382391576305, guid: 5735ae0ca021d5a4ab949682273f038f, type: 3}
   - {fileID: -7874728799882826180, guid: 57ca162f79d6f25489717bd99a163f56, type: 3}
+  - {fileID: -7384625511031748682, guid: 69d696a8c1e773f4a8349552ddf909c8, type: 3}
 --- !u!1 &1982009999075615344
 GameObject:
   m_ObjectHideFlags: 0

@@ -109,7 +109,6 @@ SpriteAtlas:
     - 4fa05088580446c499daafdeea04383c: 1871317590810639884
     - 9b1cae88d46819c498d1aee5f9e6cb91: 7296604460445858758
     - 8fb6ff8830f7c5447a00ab13aacaad8e: 7648757758996777668
-    - 69d696a8c1e773f4a8349552ddf909c8: -2889811814907502727
     - 69d696a8c1e773f4a8349552ddf909c8: -7384625511031748682
     - 746d7ed85469b5f4aadc3f35b2b0e0be: -7372981833319299914
     - d76831e8981acaf47b26224cde3f7da2: -1594773249497836899
@@ -253,7 +252,6 @@ SpriteAtlas:
   - {fileID: 1871317590810639884, guid: 4fa05088580446c499daafdeea04383c, type: 3}
   - {fileID: 7296604460445858758, guid: 9b1cae88d46819c498d1aee5f9e6cb91, type: 3}
   - {fileID: 7648757758996777668, guid: 8fb6ff8830f7c5447a00ab13aacaad8e, type: 3}
-  - {fileID: -2889811814907502727, guid: 69d696a8c1e773f4a8349552ddf909c8, type: 3}
   - {fileID: -7384625511031748682, guid: 69d696a8c1e773f4a8349552ddf909c8, type: 3}
   - {fileID: -7372981833319299914, guid: 746d7ed85469b5f4aadc3f35b2b0e0be, type: 3}
   - {fileID: -1594773249497836899, guid: d76831e8981acaf47b26224cde3f7da2, type: 3}
@@ -396,7 +394,6 @@ SpriteAtlas:
   - terrain_sand_top_e_outline_0
   - bubble_a_0
   - rock_a_outline_0
-  - fish_blue_skeleton_1
   - fish_blue_skeleton_0
   - terrain_sand_top_f_0
   - hud_number_7_0
