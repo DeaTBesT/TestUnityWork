@@ -6,12 +6,16 @@ namespace UI
 {
     /// <summary>
     /// Обёртка над несколькими столбцами-слотами.
-    /// Позволяет одним вызовом запускать/останавливать сразу несколько SlotReelView.
-    /// Верстка (количество и расположение столбцов) задаётся в инспекторе.
+    /// Принимает сигналы только от FSM через EventManager:
+    /// - "OnSlotStart"  — запустить вращение;
+    /// - "OnSlotStop"   — начать остановку;
+    /// - "OnSlotStopped" отправляется обратно в FSM, когда все барабаны остановились.
     /// </summary>
     public class SlotMachineView : MonoBehaviourExt
     {
         [SerializeField] private SlotReelView[] reels;
+
+        private bool _wasSpinning;
 
         /// <summary>
         /// Хоть один барабан сейчас крутится/останавливается.
@@ -21,6 +25,7 @@ namespace UI
             get
             {
                 if (reels == null) return false;
+
                 for (int i = 0; i < reels.Length; i++)
                 {
                     if (reels[i] != null && reels[i].IsSpinning)
@@ -31,31 +36,48 @@ namespace UI
             }
         }
 
-        /// <summary>
-        /// Можно ли нажать "Стоп" — когда все барабаны уже отспинили minSpinTime.
-        /// </summary>
-        public bool CanRequestStop
+        [OnStart]
+        private void StartThis()
         {
-            get
+            // Сигналы ИЗ FSM.
+            Model.EventManager.AddAction("OnSlotStart", OnSlotStart);
+            Model.EventManager.AddAction("OnSlotStop", OnSlotStop);
+        }
+
+        [OnDestroy]
+        private void DestroyThis()
+        {
+            Model.EventManager.RemoveAction("OnSlotStart", OnSlotStart);
+            Model.EventManager.RemoveAction("OnSlotStop", OnSlotStop);
+        }
+
+        [OnUpdate]
+        private void UpdateThis()
+        {
+            bool spinningNow = IsSpinning;
+
+            // Переход из "крутилось" в "не крутится" → сообщаем FSM, что всё остановилось.
+            if (_wasSpinning && !spinningNow)
             {
-                if (reels == null || reels.Length == 0) return false;
-
-                for (int i = 0; i < reels.Length; i++)
-                {
-                    if (reels[i] == null)
-                        continue;
-
-                    if (!reels[i].CanRequestStop)
-                        return false;
-                }
-
-                return true;
+                Model.EventManager.Invoke("OnSlotStopped");
             }
+
+            _wasSpinning = spinningNow;
+        }
+
+        private void OnSlotStart()
+        {
+            StartSpin();
+        }
+
+        private void OnSlotStop()
+        {
+            RequestStop();
         }
 
         /// <summary>
         /// Запустить вращение всех столбцов.
-        /// Вызывайте из FSM / кнопки "Старт".
+        /// Вызывается через событие "OnSlotStart" из FSM или из контекстного меню.
         /// </summary>
         [ContextMenu("Start spin")]
         public void StartSpin()
@@ -72,7 +94,7 @@ namespace UI
 
         /// <summary>
         /// Запросить остановку всех столбцов.
-        /// Вызывайте из FSM / кнопки "Стоп".
+        /// Вызывается через событие "OnSlotStop" из FSM или из контекстного меню.
         /// </summary>
         [ContextMenu("Stop spin")]
         public void RequestStop()
@@ -88,4 +110,3 @@ namespace UI
         }
     }
 }
-
