@@ -124,10 +124,10 @@ TextureImporter:
         serializedVersion: 2
         x: 18
         y: 0
-        width: 30
-        height: 98
+        width: 90
+        height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -140,55 +140,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: seaweed_pink_a_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 30
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb071f293d42ac150800000000000000
-      internalID: 5893563553489711294
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seaweed_pink_a_2
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 0
-        width: 30
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0376cc4bd29567ef0800000000000000
-      internalID: -110803087982303440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b17400533f54d714ab460dd0277ef4d0
     internalID: 0
     vertices: []
     indices: 

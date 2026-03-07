@@ -27,7 +27,7 @@ SpriteAtlas:
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
-      enableTightPacking: 1
+      enableTightPacking: 0
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
@@ -77,8 +77,6 @@ SpriteAtlas:
     - c6d39694ec246914c96143604e29f295: 4884835182617256787
     - b0c891b47f8e2dc46bc26e6c89762824: -5816461996334964738
     - 3ec244f4baa304b43973b0791c81b05d: -4125078509056059630
-    - 64a4e635aa2f7ae46ab67db7de29a385: -110803087982303440
-    - 64a4e635aa2f7ae46ab67db7de29a385: 5893563553489711294
     - 64a4e635aa2f7ae46ab67db7de29a385: -6526503570413847605
     - 66341045d3f71e74d9102652b7c6440e: 8102512026667406997
     - fc53c05561d6c4a45ab36a5dd4b9ed20: 986523871898281878
@@ -87,8 +85,6 @@ SpriteAtlas:
     - 0d4cf49597efd8845bc3a887b698e7b0: 6735514393075907094
     - d7615b951dc477d4f857514433e6c6d2: 5798779190120255974
     - 4067c5a518842c64dba9b905452348d9: -849011761307908816
-    - 96ea15e5ff31c4344809542349ecb388: 49402689274711984
-    - 96ea15e5ff31c4344809542349ecb388: 7354163987909578236
     - 96ea15e5ff31c4344809542349ecb388: -7211950570865928082
     - b5748706e5f57804391f40f2d91a7f7f: 6772163968362390084
     - ed72771645aa5074f93a4565e96e87bc: -6793058373514077041
@@ -156,9 +152,7 @@ SpriteAtlas:
     - b5951d1d45701b44b9595101bcca4a6b: 1225998576920308311
     - 6204d34dd07355c47a5e563fbd40ffa5: 985605844491357048
     - 28e6638d2390cc04b8d7029874a1b933: 5539109832491754576
-    - aed6869d3f70b6544b696f1d9aa9658a: -2673354026585263938
     - aed6869d3f70b6544b696f1d9aa9658a: -4807158585247533580
-    - aed6869d3f70b6544b696f1d9aa9658a: -8228295723176991591
     - cbae73ddc2426f5469bde58bd868ce0f: -6796884810043961086
     - 697a77ddb6e94df4f9090dc311c057fa: 6160840790414317495
     - 697a77ddb6e94df4f9090dc311c057fa: 6726719356624203710
@@ -169,9 +163,7 @@ SpriteAtlas:
     - e4a78c7ee1764164a92648c04d0664c7: -1608521514267121277
     - ab26218e41e2d0845bec68b6d11e07e4: 8374629873085402205
     - fe1a48aeecbecdd40b7243b5408aadd8: 9209614935508234549
-    - 9e1835cefaac5524588af57326e20b26: 9222000628613025366
     - 9e1835cefaac5524588af57326e20b26: -5759806588115105267
-    - 9e1835cefaac5524588af57326e20b26: 6390233384647814326
     - bf8069ce19ca54b499788b29bfd9b3c6: 7983354095939871033
     - fd3afecee03868b45b981246a97f7c37: 1707246956917954956
     - 1d89f3deec92f7b448e49eca5275dae8: 8203674098015278770
@@ -229,8 +221,6 @@ SpriteAtlas:
   - {fileID: 4884835182617256787, guid: c6d39694ec246914c96143604e29f295, type: 3}
   - {fileID: -5816461996334964738, guid: b0c891b47f8e2dc46bc26e6c89762824, type: 3}
   - {fileID: -4125078509056059630, guid: 3ec244f4baa304b43973b0791c81b05d, type: 3}
-  - {fileID: -110803087982303440, guid: 64a4e635aa2f7ae46ab67db7de29a385, type: 3}
-  - {fileID: 5893563553489711294, guid: 64a4e635aa2f7ae46ab67db7de29a385, type: 3}
   - {fileID: -6526503570413847605, guid: 64a4e635aa2f7ae46ab67db7de29a385, type: 3}
   - {fileID: 8102512026667406997, guid: 66341045d3f71e74d9102652b7c6440e, type: 3}
   - {fileID: 986523871898281878, guid: fc53c05561d6c4a45ab36a5dd4b9ed20, type: 3}
@@ -239,8 +229,6 @@ SpriteAtlas:
   - {fileID: 6735514393075907094, guid: 0d4cf49597efd8845bc3a887b698e7b0, type: 3}
   - {fileID: 5798779190120255974, guid: d7615b951dc477d4f857514433e6c6d2, type: 3}
   - {fileID: -849011761307908816, guid: 4067c5a518842c64dba9b905452348d9, type: 3}
-  - {fileID: 49402689274711984, guid: 96ea15e5ff31c4344809542349ecb388, type: 3}
-  - {fileID: 7354163987909578236, guid: 96ea15e5ff31c4344809542349ecb388, type: 3}
   - {fileID: -7211950570865928082, guid: 96ea15e5ff31c4344809542349ecb388, type: 3}
   - {fileID: 6772163968362390084, guid: b5748706e5f57804391f40f2d91a7f7f, type: 3}
   - {fileID: -6793058373514077041, guid: ed72771645aa5074f93a4565e96e87bc, type: 3}
@@ -308,9 +296,7 @@ SpriteAtlas:
   - {fileID: 1225998576920308311, guid: b5951d1d45701b44b9595101bcca4a6b, type: 3}
   - {fileID: 985605844491357048, guid: 6204d34dd07355c47a5e563fbd40ffa5, type: 3}
   - {fileID: 5539109832491754576, guid: 28e6638d2390cc04b8d7029874a1b933, type: 3}
-  - {fileID: -2673354026585263938, guid: aed6869d3f70b6544b696f1d9aa9658a, type: 3}
   - {fileID: -4807158585247533580, guid: aed6869d3f70b6544b696f1d9aa9658a, type: 3}
-  - {fileID: -8228295723176991591, guid: aed6869d3f70b6544b696f1d9aa9658a, type: 3}
   - {fileID: -6796884810043961086, guid: cbae73ddc2426f5469bde58bd868ce0f, type: 3}
   - {fileID: 6160840790414317495, guid: 697a77ddb6e94df4f9090dc311c057fa, type: 3}
   - {fileID: 6726719356624203710, guid: 697a77ddb6e94df4f9090dc311c057fa, type: 3}
@@ -321,9 +307,7 @@ SpriteAtlas:
   - {fileID: -1608521514267121277, guid: e4a78c7ee1764164a92648c04d0664c7, type: 3}
   - {fileID: 8374629873085402205, guid: ab26218e41e2d0845bec68b6d11e07e4, type: 3}
   - {fileID: 9209614935508234549, guid: fe1a48aeecbecdd40b7243b5408aadd8, type: 3}
-  - {fileID: 9222000628613025366, guid: 9e1835cefaac5524588af57326e20b26, type: 3}
   - {fileID: -5759806588115105267, guid: 9e1835cefaac5524588af57326e20b26, type: 3}
-  - {fileID: 6390233384647814326, guid: 9e1835cefaac5524588af57326e20b26, type: 3}
   - {fileID: 7983354095939871033, guid: bf8069ce19ca54b499788b29bfd9b3c6, type: 3}
   - {fileID: 1707246956917954956, guid: fd3afecee03868b45b981246a97f7c37, type: 3}
   - {fileID: 8203674098015278770, guid: 1d89f3deec92f7b448e49eca5275dae8, type: 3}
@@ -380,8 +364,6 @@ SpriteAtlas:
   - seaweed_grass_b_0
   - fish_grey_outline_0
   - fish_pink_skeleton_outline_0
-  - seaweed_pink_a_2
-  - seaweed_pink_a_1
   - seaweed_pink_a_0
   - fish_orange_skeleton_outline_0
   - seaweed_green_b_1
@@ -390,8 +372,6 @@ SpriteAtlas:
   - rock_b_outline_0
   - terrain_sand_top_c_0
   - hud_number_0_0
-  - background_seaweed_g_2
-  - background_seaweed_g_1
   - background_seaweed_g_0
   - fish_grey_0
   - hud_percent_0
@@ -459,9 +439,7 @@ SpriteAtlas:
   - terrain_sand_top_a_0
   - seaweed_pink_d_outline_0
   - terrain_dirt_top_d_outline_0
-  - background_seaweed_a_1
   - background_seaweed_a_0
-  - background_seaweed_a_2
   - terrain_dirt_top_e_0
   - seaweed_grass_a_1
   - seaweed_grass_a_0
@@ -472,9 +450,7 @@ SpriteAtlas:
   - fish_orange_outline_0
   - terrain_dirt_top_f_0
   - terrain_dirt_top_h_0
-  - seaweed_green_a_2
   - seaweed_green_a_0
-  - seaweed_green_a_1
   - terrain_dirt_top_d_0
   - hud_number_2_0
   - terrain_dirt_top_g_outline_0

@@ -95,9 +95,12 @@ MonoBehaviour:
   minSpinTime: 3
   snapDuration: 0.25
   symbolSprites:
-  - {fileID: -5478135496998406266, guid: 391c694bd451f7749b16cb6f551d6745, type: 3}
-  - {fileID: 2995768774295807913, guid: d4d94e54e4edf0c48b7a13f6c9ee5166, type: 3}
-  - {fileID: 4960192699990492036, guid: 9a96164baaa7f7b4cbe164bcfbece4ef, type: 3}
+  - {fileID: -1925377011665060405, guid: c52d6d20049a4c74aa9692a92435c232, type: 3}
+  - {fileID: 313197043936953237, guid: d94f525549d693e4fa4f229eb0879c9d, type: 3}
+  - {fileID: -8088467617630128793, guid: 3e8249862e3647b46b365b23a2165a5b, type: 3}
+  - {fileID: 832738382391576305, guid: 5735ae0ca021d5a4ab949682273f038f, type: 3}
+  - {fileID: 6772163968362390084, guid: b5748706e5f57804391f40f2d91a7f7f, type: 3}
+  - {fileID: -7874728799882826180, guid: 57ca162f79d6f25489717bd99a163f56, type: 3}
 --- !u!1 &1982009999075615344
 GameObject:
   m_ObjectHideFlags: 0

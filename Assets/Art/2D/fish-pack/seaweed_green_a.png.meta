@@ -124,10 +124,10 @@ TextureImporter:
         serializedVersion: 2
         x: 18
         y: 0
-        width: 30
-        height: 98
+        width: 89
+        height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -140,55 +140,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: seaweed_green_a_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 30
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6bc66cb086baea850800000000000000
-      internalID: 6390233384647814326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: seaweed_green_a_2
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 0
-        width: 30
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65e88e226b02bff70800000000000000
-      internalID: 9222000628613025366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ce6722c8cb1384e4b87a129739c58ece
     internalID: 0
     vertices: []
     indices: 
