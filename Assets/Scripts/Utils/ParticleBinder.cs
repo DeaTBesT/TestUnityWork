@@ -1,5 +1,4 @@
-﻿using AxGrid;
-using AxGrid.Base;
+﻿using AxGrid.Base;
 using AxGrid.Model;
 using Coffee.UIExtensions;
 using UnityEngine;
@@ -22,11 +21,13 @@ namespace Utils
         {
             if (value == "1")
             {
+                _particleSystem.enabled = true;
                 _particleSystem.Play();
             }
             else
             {
                 _particleSystem.Stop();
+                _particleSystem.enabled = false;
             }
         }
     }

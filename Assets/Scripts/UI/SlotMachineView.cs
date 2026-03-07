@@ -1,45 +1,20 @@
-using AxGrid;
+using System.Linq;
 using AxGrid.Base;
 using UnityEngine;
 
 namespace UI
 {
-    /// <summary>
-    /// Обёртка над несколькими столбцами-слотами.
-    /// Принимает сигналы только от FSM через EventManager:
-    /// - "OnSlotStart"  — запустить вращение;
-    /// - "OnSlotStop"   — начать остановку;
-    /// - "OnSlotStopped" отправляется обратно в FSM, когда все барабаны остановились.
-    /// </summary>
     public class SlotMachineView : MonoBehaviourExt
     {
-        [SerializeField] private SlotReelView[] reels;
+        [SerializeField] private SlotReelView[] _reels;
 
         private bool _wasSpinning;
 
-        /// <summary>
-        /// Хоть один барабан сейчас крутится/останавливается.
-        /// </summary>
-        public bool IsSpinning
-        {
-            get
-            {
-                if (reels == null) return false;
-
-                for (int i = 0; i < reels.Length; i++)
-                {
-                    if (reels[i] != null && reels[i].IsSpinning)
-                        return true;
-                }
-
-                return false;
-            }
-        }
+        public bool IsSpinning => _reels != null && _reels.Any(t => t != null && t.IsSpinning);
 
         [OnStart]
         private void StartThis()
         {
-            // Сигналы ИЗ FSM.
             Model.EventManager.AddAction("OnSlotStart", OnSlotStart);
             Model.EventManager.AddAction("OnSlotStop", OnSlotStop);
         }
@@ -54,10 +29,9 @@ namespace UI
         [OnUpdate]
         private void UpdateThis()
         {
-            bool spinningNow = IsSpinning;
+            var spinningNow = IsSpinning;
 
-            // Переход из "крутилось" в "не крутится" → сообщаем FSM, что всё остановилось.
-            if (_wasSpinning && !spinningNow)
+            if ((_wasSpinning) && (!spinningNow))
             {
                 Model.EventManager.Invoke("OnSlotStopped");
             }
@@ -65,47 +39,35 @@ namespace UI
             _wasSpinning = spinningNow;
         }
 
-        private void OnSlotStart()
-        {
+        private void OnSlotStart() => 
             StartSpin();
-        }
 
-        private void OnSlotStop()
-        {
+        private void OnSlotStop() => 
             RequestStop();
-        }
 
-        /// <summary>
-        /// Запустить вращение всех столбцов.
-        /// Вызывается через событие "OnSlotStart" из FSM или из контекстного меню.
-        /// </summary>
         [ContextMenu("Start spin")]
         public void StartSpin()
         {
-            if (reels == null)
+            if (_reels == null)
                 return;
 
-            for (int i = 0; i < reels.Length; i++)
+            foreach (var reel in _reels)
             {
-                if (reels[i] != null)
-                    reels[i].StartSpin();
+                if (reel != null)
+                    reel.StartSpin();
             }
         }
 
-        /// <summary>
-        /// Запросить остановку всех столбцов.
-        /// Вызывается через событие "OnSlotStop" из FSM или из контекстного меню.
-        /// </summary>
         [ContextMenu("Stop spin")]
         public void RequestStop()
         {
-            if (reels == null)
+            if (_reels == null)
                 return;
 
-            for (int i = 0; i < reels.Length; i++)
+            foreach (var reel in _reels)
             {
-                if (reels[i] != null)
-                    reels[i].RequestStop();
+                if (reel != null)
+                    reel.RequestStop();
             }
         }
     }

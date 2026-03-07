@@ -1,4 +1,3 @@
-using AxGrid;
 using AxGrid.Base;
 using AxGrid.FSM;
 
@@ -11,15 +10,6 @@ namespace States
         public void Enter()
         {
             Model?.EventManager.AddAction($"OnButtonStartClick", ButtonStart);
-            Log.Debug($"Entering {Parent.CurrentStateName}");
-        }
-
-        [OnDelay]
-        private void DiactivateButtons()
-        {
-            Model.Set("BtnButtonStartEnable", true);
-            Model.Set("BtnButtonStopEnable", false);
-            Model.Set("OnSpinParticleChanged", "0");
         }
 
         [Exit]
@@ -28,13 +18,21 @@ namespace States
             //Model.EventManager.RemoveAction($"OnButtonStartClick", ButtonStart);
         }
         
+        [OnDelay]
+        private void Init()
+        {
+            Model.Set("BtnButtonStartEnable", true);
+            Model.Set("BtnButtonStopEnable", false);
+            Model.Set("OnSpinParticleChanged", "0");
+        }
+        
         private void ButtonStart()
         {
-            Log.Debug($"{Parent.CurrentStateName} ButtonStart");
             if (!Model.Get<bool>("BtnButtonStartEnable"))
+            {
                 return;
+            }
 
-            // Только FSM знает, куда переходить дальше.
             Parent.Change(nameof(SpinState));
         }
     }
