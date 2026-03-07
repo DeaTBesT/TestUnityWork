@@ -14,20 +14,14 @@ namespace States
             Log.Debug($"Entering {Parent.CurrentStateName}");
         }
 
-        [OnDelay(0.1f)]
+        [OnDelay]
         private void DiactivateButtons()
         {
-            // В режиме ожидания можно нажимать только "Старт".
-            Model.Set("BtnButtonStartEnable", false); // включим с небольшой задержкой
-            Model.Set("BtnButtonStopEnable", false);
-        }
-        
-        [OnDelay(0.2f)]
-        private void ActivateButton()
-        {
             Model.Set("BtnButtonStartEnable", true);
+            Model.Set("BtnButtonStopEnable", false);
+            Model.Set("OnSpinParticleChanged", "0");
         }
-        
+
         [Exit]
         public void Exit()
         {

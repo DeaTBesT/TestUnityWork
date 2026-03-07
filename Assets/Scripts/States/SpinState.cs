@@ -15,6 +15,8 @@ namespace States
             // Сигнал во view: запустить анимацию рулетки.
             Model?.EventManager.Invoke("OnSlotStart");
 
+            Model.Set("SpinParticle", "1");
+            
             Log.Debug($"Entering {Parent.CurrentStateName}");
         }
 
@@ -47,6 +49,8 @@ namespace States
             if (!Model.Get<bool>("BtnButtonStopEnable"))
                 return;
 
+            Model.Set("SpinParticle", "0");
+            
             // Переход в состояние остановки.
             Parent.Change(nameof(StoppingState));
         }
